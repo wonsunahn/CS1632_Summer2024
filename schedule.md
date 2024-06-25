@@ -15,6 +15,8 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
     * [Java Assessment Exercise](exercises/0)
   
 * Class 2
+  * Assignments due before class
+    * Java Assessment Exercise
   * Lectures
     * Test Plans Lecture (READING: AFIST, Chapters 6, 8)
     * Defects Lecture (READING: AFIST, Chapters 9)
@@ -34,7 +36,6 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
     * Listen to Unit Testing Part 1 Lecture (READING: AFIST, Chapter 13)
     * Listen to Test-driven Development Lecture (READING: AFIST, Chapter 15)
     * Partnership Contract on GradeScope
-    * [Java Assessment Exercise](exercises/0)
   * Lectures
     * Unit Testing Part 2 Lecture (READING: AFIST, Chapter 14)
   * In-class exercises
