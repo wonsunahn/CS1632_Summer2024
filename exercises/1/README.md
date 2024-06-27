@@ -105,11 +105,11 @@ Write up a test plan in the report template provided [below](#format).
 Remember, the template for test cases -
 
 ```
-	IDENTIFIER: [A unique number or string (e.g. TEST-ARGS-NUMBER-FIVE-ARGS)]
-	TEST CASE: [A description of the test case]
-	PRECONDITIONS: [State of the system before performing execution steps]
-	EXECUTION STEPS: [Step-by-step instructions on how to perform test]
-	POSTCONDITIONS: [*EXPECTED* state of the system after having performed execution steps]
+IDENTIFIER: [A unique number or string (e.g. TEST-ARGS-NUMBER-FIVE-ARGS)]
+TEST CASE: [A description of the test case]
+PRECONDITIONS: [State of the system before performing execution steps]
+EXECUTION STEPS: [Step-by-step instructions on how to perform test]
+POSTCONDITIONS: [*EXPECTED* state of the system after having performed execution steps]
 ```
 
 The IDENTIFIER is some value which will uniquely specify the test case.  We
@@ -182,15 +182,15 @@ Please find **at least three defects** and report them through the GitHub issues
 This is the correct format for defects -
 
 ```
-	 IDENTIFIER: [A unique number or string (e.g. BUG-ARGS-NUMBER-FIVE-ARGS)]
-	 SUMMARY: [A one sentence description of defect]
-	 DESCRIPTION: [A detailed description of everything the tester discovered]
-	 REPRODUCTION STEPS: [Preconditions + Steps to reproduce (similar to test case execution steps)]
-	 EXPECTED BEHAVIOR: [What you expected according to requirements]
-	 OBSERVED BEHAVIOR: [What you *ACTUALLY* saw]
+IDENTIFIER: [A unique number or string (e.g. BUG-ARGS-NUMBER-FIVE-ARGS)]
+SUMMARY: [A one sentence description of defect]
+DESCRIPTION: [A detailed description of everything the tester discovered]
+REPRODUCTION STEPS: [Preconditions + Steps to reproduce (similar to test case execution steps)]
+EXPECTED BEHAVIOR: [What you expected according to requirements]
+OBSERVED BEHAVIOR: [What you *ACTUALLY* saw]
 ```
 
-Please refer to [Lecture 5: Defects](../../lectures/CS1632_Lecture5_Defects.pdf) Slides 13 - 27
+Please refer to [Lecture 5: Defects](../../lectures/CS1632_Lecture5_Defects.pdf) Slides 13 - 25
 for more details and examples for each item.  Optional bug report items
 such as SEVERITY or IMPACT were not included for this exercise.
 
