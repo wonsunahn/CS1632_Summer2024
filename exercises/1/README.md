@@ -16,7 +16,7 @@ Summer Semester 2024 - Exercise 1
 
 * DUE: July 2 (Tuesday), 2024 before start of class
 
-**GitHub Classroom Link:** https://classroom.github.com/a/PBLVWL_q
+**GitHub Classroom Link:** https://classroom.github.com/a/KBcxlpiP
 
 This is going to be your first group assignment.  When you click on the GitHub
 Classroom link, you will be asked to either create a new team or join an
