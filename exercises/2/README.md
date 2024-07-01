@@ -21,7 +21,7 @@ Summer Semester 2024 - Exercise 2
 
 * DUE: July 9 (Tuesday), 2024 before start of class
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/r4PEwLyo
 
 You will be working on individual repositories this time.  See [Groupwork Plan](#groupwork-plan).
 
