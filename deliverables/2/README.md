@@ -21,7 +21,7 @@ SUmmer Semester 2024
 
 * DUE: July 16 (Tuesday), 2024 before start of class
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/0p16wsBZ
 
 ## Description
 
