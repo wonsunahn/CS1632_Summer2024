@@ -85,6 +85,8 @@
                   </limits>
                   <includes>
                     <include>edu.pitt.cs.CoffeeMakerQuestImpl</include>
+                    <include>edu.pitt.cs.PlayerImpl</include>
+                    <include>edu.pitt.cs.RoomImpl</include>
                   </includes>
                 </rule>
               </rules>
