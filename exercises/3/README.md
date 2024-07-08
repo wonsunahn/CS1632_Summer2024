@@ -24,7 +24,7 @@
 
 * DUE: July 16 (Tuesday), 2024 8:30 AM
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/-mFE2_xV
 
 ## Description
 
