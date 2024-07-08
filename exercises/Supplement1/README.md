@@ -20,7 +20,7 @@ Summer Semester 2024 - Supplementary Exercise 1
 
 * DUE: July 11 (Thursday), 2024 8:30 AM 
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/FU-OuDZT
 
 ## Description
 
