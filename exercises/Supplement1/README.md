@@ -289,6 +289,11 @@ will run the autograder to grade you and give feedback.  If you get deductions,
 fix your code based on the feedback and resubmit.  Repeat until you don't get
 deductions.
 
+If you have insurmountable difficulties that you could not resolve by either
+asking your classmates or your instructor, please complete the reflection
+section in the ReportTemplate.docx file, export it to ReportTemplate.pdf, and
+then submit the file as part of your repository.
+
 # GradeScope Feedback
 
 GradeScope grades your submission in two phases:
