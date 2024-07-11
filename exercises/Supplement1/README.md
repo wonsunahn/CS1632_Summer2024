@@ -292,7 +292,9 @@ deductions.
 If you have insurmountable difficulties that you could not resolve by either
 asking your classmates or your instructor, please complete the reflection
 section in the ReportTemplate.docx file, export it to ReportTemplate.pdf, and
-then submit the file as part of your repository.
+then submit the file as part of your repository.  If you do not write a
+reflection even when you have deductions on the autograder, I can only assume
+that you did not put any effort into it.
 
 # GradeScope Feedback
 
