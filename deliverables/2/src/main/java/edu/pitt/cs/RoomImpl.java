@@ -2,7 +2,11 @@ package edu.pitt.cs;
 
 public class RoomImpl implements Room {
 
-	// TODO: Add more member variables and methods as needed.
+	private String furnishing;
+	private String adjective;
+	private Item item;
+	private String northDoor;
+	private String southDoor;
 	
 	static final String newline = System.lineSeparator(); // Platform independent newline ("\n" or "\r\n")
 
