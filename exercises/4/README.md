@@ -18,7 +18,7 @@ Summer Semester 2024 - Exercise 4
 
 * DUE: July 18 (Thursday), 2024 8:30 AM
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/ovHnQleR
 
 ## Before You Begin
 
