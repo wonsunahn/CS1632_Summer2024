@@ -17,6 +17,7 @@ public class PlayerUnitTest {
 	@Before
 	public void setup() {
 		// 1. Create a Player with no items (no coffee, no cream, no sugar) and assign to player.
+		// Make sure you use the Player.createInstance method to create the player, or GradeScope autograder will not function properly.
 		// TODO: Fill in 
 	}
 

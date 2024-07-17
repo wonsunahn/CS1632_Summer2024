@@ -138,14 +138,14 @@ public class GameIntegrationTest {
 
 	@Before
 	public void setup() {
-		// 1. Redirect system output from stdout to the "out" stream
-		stdout = System.out; // Make a back up of the original stdout (DON'T REMOVE!)
-		// TODO: Fill in
-		out = new ByteArrayOutputStream();
-		System.setOut(new PrintStream(out));
+		// 1. Make a back up of the original stdout
+		stdout = System.out;
 
 		// 2. Make a back up of stdin
 		stdin = System.in;
+
+		// 3. Redirect system output from stdout to the "out" stream
+		// TODO: Fill in
 	}
 
 	@After

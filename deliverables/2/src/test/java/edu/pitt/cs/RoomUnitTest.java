@@ -19,9 +19,11 @@ public class RoomUnitTest {
 	@Before
 	public void setup() {
 		// 1. Create a "Small" Room with a "Quaint sofa" furnishing, no item, no north door (null), no south door (null), and assign to isolatedRoom.
+		// Make sure you use the Room.createInstance method to create the room, or GradeScope autograder will not function properly.
 		// TODO: Fill in
 		
 		// 2. Create a "Funny" Room with a "Sad record player" furnishing, cream item, "Beige" north door, "Massive" south door, and assign to connectedRoom.
+		// Make sure you use the Room.createInstance method to create the room, or GradeScope autograder will not function properly.
 		// TODO: Fill in
 	}
 
