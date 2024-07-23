@@ -21,7 +21,7 @@ Summer Semester 2024 - Supplementary Exercise 3
 
 DUE: July 25 (Tuesday), 2024 8:30 AM
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/f4PRG-ba
 
 ## Description
 
