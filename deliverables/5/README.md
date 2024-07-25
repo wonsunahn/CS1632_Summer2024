@@ -6,7 +6,7 @@
     + [Skill Mode](#skill-mode)
     + [Text UI Mode](#text-ui-mode)
   * [What to do](#what-to-do)
-    + [Task 1: Write Unit Tests for BeanTest to drive BeanImpl development](#task-1-write-unit-tests-for-beantest-to-drive-beanimpl-development)
+    + [Task 1: Write Unit Tests for BeanTest to drive Bean development](#task-1-write-unit-tests-for-beantest-to-drive-bean-development)
     + [Task 2: Write Integration Tests for BeanCounterLogicTest to drive BeanCounterLogic development](#task-2-write-integration-tests-for-beancounterlogictest-to-drive-beancounterlogic-development)
     + [Task 3: Generate Paths for Different Machine Configurations in JPFJUnitTest.java](#task-3-generate-paths-for-different-machine-configurations-in-jpfjunittestjava)
     + [Task 4: Write Property-based tests in JPFJUnitTest.java](#task-4-write-property-based-tests-in-jpfjunittestjava)
@@ -229,12 +229,11 @@ Here is a list of files and their contents:
 called.  Maps beans into a logical coordinate system.  Also contains a main
 method which implements the Text UI of the program. (**modify**)
 
-* BeanImpl.java - The Bean implementation.  Maintains the x-coordinate of the
-  bean, as well as how many right moves are remaining if in skill mode.
-Governs the movement of that particular bean when choose() is called, depending
-on whether the bean is a skilled bean or a lucky bean.  The Random number
-generator that gives randomness to the movement is injected in the BeanImpl
-constructor for easier testing. (**modify**)
+* LuckyBeanImpl.java, SkilledBeanImpl.java - The Bean implementations for lucky
+  and skilled beans respectively.  Maintains the x-coordinate and y-coordinate
+of the bean as it advances through the machine.  The Random object that gives
+randomness to the movement of the bean is injected in the constructor for
+easier testing. (**modify**)
 
 * JPFJUnitTest.java - An integration test for the BeanCounterLogicImpl class
   run on top of JPF.  You are asked to exhaustively test different machine
@@ -260,8 +259,8 @@ BeanCounterLogicSolution (the solution implementation) depending on
 InstanceType.  Do not modify.
 
 * Bean.java - The public interface of Bean.  The createInstance method creates
-  an instance of BeanImpl (your code), BeanBuggy (a buggy implementation), or
-BeanSolution (the solution implementation) depending on InstanceType.
+  an instance of your bean, a buggy bean, or a solution bean depending on
+InstanceType.  Do not modify.
 
 * BeanCounterGUI.java - Contains the main method for the GUI interface of the
   program.  Creates a MainFrame.
@@ -281,15 +280,12 @@ coordinates of Beans are translated to physical coordinates.
 * BeanCounterBuggy.jar - A buggy implementation of bean counter.
 
 * jpf-core/runTest.bat and jpf-core/runTest.sh - Scripts to run JPFJUnitTest on
-  top of JPF.  / You are asked to fill in and modify 5 files:
-BeanCounterLogicImpl.java, BeanImpl.java, BeanCounterLogicTest.java,
-BeanTest.java, and JPFJUnitTest.java.  The first two files complete the bean
-counter implementation.  The third and fourth files are JUnit tests for the two
-implementation files.  The last file tests the implementation using the Java
-Path Finder model checker.  Take care that you limit your modifications to
-these three files as all the other files will be ignored in your submission.
-Also, take care that you do not change the public interfaces of
-BeanCounterLogic and Bean as GradeScope relies on them.
+  top of JPF.  
+
+Take care that you limit your modifications to the files that are marked
+**modify**, as all the other files will be ignored in your submission.  Also,
+take care that you do not change the public interfaces of BeanCounterLogic and
+Bean as GradeScope relies on them.
 
 I expect you to employ test-driven development (TDD) for this project and fully
 embrace it.  I can guarantee you that it will shorten development time.  You
@@ -299,7 +295,7 @@ better understanding of how test application is supposed to behave before
 starting the implementation.  I will lay down the steps, roughly in the order
 you should perform them.
 
-### Task 1: Write Unit Tests for BeanTest to drive BeanImpl development
+### Task 1: Write Unit Tests for BeanTest to drive Bean development
 
 Start by completing the tests in
 [BeanTest.java](src/test/java/edu/pitt/cs/BeanTest.java).  Please start from
@@ -307,14 +303,14 @@ the @Before setUp() method to create the beans for testing.  Please use the
 Bean.createInstance method to create the beans (the GradeScope autograder
 relies on you to do that).  You have the option to pass in InstanceType.IMPL,
 InstanceType.SOLUTION, or InstanceType.BUGGY to Bean.createInstance to create a
-bean from your BeanImpl class, a solution Bean class (from
-BeanCounterSolution.jar) and a buggy Bean class (from BeanCounterBuggy.jar).
-As previously, you can test against the solution and buggy classes to gain
-confidence that your test is working properly before applying it to your
-BeanImpl to drive your development (TDD).  All tests should pass the solution
-and all tests should fail the buggy Bean, with the exception of testConstructor
-and testReset.  On your final submission, your test should be testing
-InstanceType.IMPL, since by then your implementation would be complete.
+bean from your implementation classes (either LuckyBeanImpl or
+SkilledBeanImpl), a solution bean, or a buggy bean.  As previously, you can
+test against the solution and buggy beans to gain confidence that your test
+is working properly before applying it to your implementation to drive your
+development (TDD).  All tests should pass the solution and all tests should
+fail the buggy Bean, with the exception of testConstructor and testReset.  On
+your final submission, your test should be testing InstanceType.IMPL, since by
+then your implementation would be complete.
 
 Now, when testing Beans, there is a complication: Beans in their natural state
 tend to behave wildy and randomly bound left and right, which is not amenable
@@ -341,9 +337,8 @@ mvn test
 Or using the VSCode Testing extension (the flask icon).
 
 After you are satisfied with your tests, use them to drive the development of
-BeanImpl.  Please read the Javadoc comment on top of BeanImpl closely before
-starting.
-   
+LuckyBeanImpl.java and SkilledBeanImpl.java.
+ 
 ### Task 2: Write Integration Tests for BeanCounterLogicTest to drive BeanCounterLogic development
 
 Next complete the tests in
