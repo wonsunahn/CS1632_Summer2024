@@ -26,7 +26,7 @@ DUE: August 7 (Wednesday), 2024 8:30 AM
 
 Due to the grading deadline, there is no late submission.
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/lR5aqGUW
 
 ## Overview
 
