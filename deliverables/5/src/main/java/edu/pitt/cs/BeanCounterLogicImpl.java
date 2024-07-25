@@ -4,7 +4,7 @@ import java.util.Formatter;
 import java.util.Random;
 
 /**
- * Code by @author Wonsun Ahn.  Copyright Spring 2024.
+ * Code by @author Wonsun Ahn.  Copyright Summer 2024.
  * 
  * <p>
  * BeanCounterLogic: The bean counter, also known as a quincunx or the Galton
