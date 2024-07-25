@@ -264,7 +264,7 @@ public class BeanCounterLogicImpl implements BeanCounterLogic {
 			showUsage();
 			return;
 		}
-		
+
 		if (args.length == 4 && args[3].equals("debug")) {
 			debug = true;
 		} else {
@@ -272,11 +272,11 @@ public class BeanCounterLogicImpl implements BeanCounterLogic {
 		}
 
 		// Create the internal logic
-		BeanCounterLogicImpl logic = new BeanCounterLogicImpl(slotCount);
+		BeanCounterLogic logic = BeanCounterLogic.createInstance(InstanceType.IMPL, slotCount);;
 		// Create the beans (in luck mode)
-		BeanImpl[] beans = new BeanImpl[beanCount];
+		Bean[] beans = new Bean[beanCount];
 		for (int i = 0; i < beanCount; i++) {
-			beans[i] = new BeanImpl(slotCount, luck, new Random());
+			beans[i] = Bean.createInstance(InstanceType.IMPL, slotCount, luck, new Random());
 		}
 		// Initialize the logic with the beans
 		logic.reset(beans);

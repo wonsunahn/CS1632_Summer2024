@@ -12,15 +12,29 @@ public interface Bean {
 	 * @return Bean object
 	 */
 	public static Bean createInstance(InstanceType type, int slotCount, boolean isLuck, Random rand) {
-		switch (type) {
-			case IMPL:
-				return new BeanImpl(slotCount, isLuck, rand);
-			case BUGGY:
-				return new BeanBuggy(slotCount, isLuck, rand);
-			case SOLUTION:
-				return new BeanSolution(slotCount, isLuck, rand);
+		if (isLuck) {
+			switch (type) {
+				case IMPL:
+					return new LuckyBeanImpl(slotCount, rand);
+				case BUGGY:
+					return new LuckyBeanBuggy(slotCount, rand);
+				case SOLUTION:
+					return new LuckyBeanSolution(slotCount, rand);
+				default:
+					return null;
+			}
+		} else {
+			switch (type) {
+				case IMPL:
+					return new SkilledBeanImpl(slotCount, rand);
+				case BUGGY:
+					return new SkilledBeanBuggy(slotCount, rand);
+				case SOLUTION:
+					return new SkilledBeanSolution(slotCount, rand);
+				default:
+					return null;
+			}
 		}
-		return null;
 	}
 
 	// Public interface of BeanCounterLogic

@@ -1,10 +1,10 @@
 package edu.pitt.cs;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 
-@edu.umd.cs.findbugs.annotations.SuppressFBWarnings(value = "EI_EXPOSE_REP2", justification = "Yes, mainPanel is exposed but it is not a security issue.")
 public class StepButton extends JButton {
 
 	private MainPanel mainPanel;
@@ -14,6 +14,7 @@ public class StepButton extends JButton {
 	 * 
 	 * @param m the main animation panel where all the action happens
 	 */
+	@SuppressFBWarnings(value = "EI_EXPOSE_REP2", justification = "This is not a security vulnerability.")
 	public StepButton(MainPanel m) {
 		super("Step");
 		mainPanel = m;

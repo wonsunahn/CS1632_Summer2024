@@ -1,19 +1,15 @@
 package edu.pitt.cs;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.io.PrintWriter;
-import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.Charset;
 import java.util.Arrays;
 import java.util.Random;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
@@ -73,6 +69,7 @@ public class BeanCounterLogicTest {
 	/**
 	 * Sets up the JUnit test fixture.
 	 */
+	@SuppressFBWarnings(value = "DMI_RANDOM_USED_ONLY_ONCE", justification = "This is needed for testing purposes so go away.")
 	@Before
 	public void setUp() {
 		logic = BeanCounterLogic.createInstance(InstanceType.IMPL, slotCount);
@@ -117,7 +114,7 @@ public class BeanCounterLogicTest {
 	 * Postconditions: logic.getRemainingBeanCount() returns 1.
 	 *                 getInSlotsBeanCount() returnd 0.
 	 *                 logic.getInFlightBeanXPos(0) returns 0.
-	 *                 logic.getInFlightBeanXPos(1) returns 0.
+	 *                 logic.getInFlightBeanXPos(1) returns 1.
 	 *                 For all other i, logic.getInFlightBeanXPos(i) returns BeanCounterLogic.NO_BEAN_IN_YPOS.
 	 * </pre>
 	 */
@@ -156,8 +153,8 @@ public class BeanCounterLogicTest {
 	 * Postconditions: logic.getRemainingBeanCount() returns 0.
 	 *                 getInSlotsBeanCount() returnd 0.
 	 *                 logic.getInFlightBeanXPos(1) returns 1.
-	 *                 logic.getInFlightBeanXPos(2) returns 2.
-	 *                 logic.getInFlightBeanXPos(3) returns 1.
+	 *                 logic.getInFlightBeanXPos(2) returns 1.
+	 *                 logic.getInFlightBeanXPos(3) returns 2.
 	 *                 For all other i, logic.getInFlightBeanXPos(i) returns BeanCounterLogic.NO_BEAN_IN_YPOS.
 	 * </pre>
 	 */
@@ -175,7 +172,7 @@ public class BeanCounterLogicTest {
 	 *                  Call logic.advanceStep() 4 times.
 	 * Postconditions: logic.getRemainingBeanCount() returns 0.
 	 *                 getInSlotsBeanCount() returnd 0.
-	 *                 logic.getInFlightBeanXPos(2) returns 1.
+	 *                 logic.getInFlightBeanXPos(2) returns 2.
 	 *                 logic.getInFlightBeanXPos(3) returns 2.
 	 *                 logic.getInFlightBeanXPos(4) returns 2.
 	 *                 For all other i, logic.getInFlightBeanXPos(i) returns BeanCounterLogic.NO_BEAN_IN_YPOS.
@@ -194,8 +191,8 @@ public class BeanCounterLogicTest {
 	 * Execution steps: Pour lucky beans into machine by calling logic.reset(luckyBeans).
 	 *                  Call logic.advanceStep() 5 times.
 	 * Postconditions: logic.getRemainingBeanCount() returns 0.
-	 *                 logic.getInFlightBeanXPos(3) returns 2.
-	 *                 logic.getInFlightBeanXPos(4) returns 2.
+	 *                 logic.getInFlightBeanXPos(3) returns 3.
+	 *                 logic.getInFlightBeanXPos(4) returns 3.
 	 *                 For all other i, logic.getInFlightBeanXPos(i) returns BeanCounterLogic.NO_BEAN_IN_YPOS.
 	 *                 logic.getSlotBeanCount(2) returns 1.
 	 *                 For all other i, logic.getSlotBeanCount(i) returns 0.
@@ -214,9 +211,10 @@ public class BeanCounterLogicTest {
 	 * Execution steps: Pour lucky beans into machine by calling logic.reset(luckyBeans).
 	 *                  Call logic.advanceStep() 6 times.
 	 * Postconditions: logic.getRemainingBeanCount() returns 0.
-	 *                 logic.getInFlightBeanXPos(4) returns 3.
+	 *                 logic.getInFlightBeanXPos(4) returns 4.
 	 *                 For all other i, logic.getInFlightBeanXPos(i) returns BeanCounterLogic.NO_BEAN_IN_YPOS.
-	 *                 logic.getSlotBeanCount(2) returns 2.
+	 *                 logic.getSlotBeanCount(2) returns 1.
+	 *                 logic.getSlotBeanCount(3) returns 1.
 	 *                 For all other i, logic.getSlotBeanCount(i) returns 0.
 	 * </pre>
 	 */
@@ -234,8 +232,9 @@ public class BeanCounterLogicTest {
 	 *                  Call logic.advanceStep() 7 times.
 	 * Postconditions: logic.getRemainingBeanCount() returns 0.
 	 *                 getInFlightBeanCount() returns 0.
-	 *                 logic.getSlotBeanCount(2) returns 2.
+	 *                 logic.getSlotBeanCount(2) returns 1.
 	 *                 logic.getSlotBeanCount(3) returns 1.
+	 *                 logic.getSlotBeanCount(4) returns 1.
 	 *                 For all other i, logic.getSlotBeanCount(i) returns 0.
 	 * </pre>
 	 */
@@ -327,7 +326,7 @@ public class BeanCounterLogicTest {
 	 * Execution steps: Pour lucky beans into machine by calling logic.reset(luckyBeans).
 	 *                  Call logic.advanceStep() until it returns false.
 	 *                  Call logic.getAverageSlotBeanCount().
-	 * Postconditions: return value is 2.3333333333333333 within a difference delta of 0.001
+	 * Postconditions: return value is 3.0 within a difference delta of 0.001
 	 * </pre>
 	 */
 	@Test
