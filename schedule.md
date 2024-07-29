@@ -123,15 +123,21 @@ AFIST = [_A Friendly Introduction to Software Testing_](software-quality-assuran
     * Smoke and Exploratory Testing Lecture (READING: AFIST, Chapters 10-11)
   * In-class exercises
     * [Supplementary Exercise 4: CI Pipelines](exercises/Supplement4)
+  * Assignment releases
+    * Listen to Security Testing Lecture (READING: AFIST, Chapter 20)
 
 * Class 2
-  * Lectures
-    * Security Testing Lecture (READING: AFIST, Chapter 20)
+  * Assignments due before class
+    * Listen to Security Testing Lecture (READING: AFIST, Chapter 20)
   * In-class exercises
     * [Supplementary Exercise 4: Dockers](exercises/Supplement4)
 
-* Midterm 2 on GradeScope: TBD
+* Midterm 2 on GradeScope: August 2 (Friday) 9:00 AM - August 3 (Saturday) 11:59 PM
   * Check out the **[study guide](/study_guides/midterm_2_study_guide.md)**!
+  * Will be posted as link named "Midterm 2" at Friday 9:00 AM.
+  * You will choose a 3 hour span to complete exam within the above 3-day period.
+  * Your 3 hours begin the moment you click on link and agree to the terms on the next screen.
+  * Open book but individual work.
 
 ## WEEK 7 (Week of 5 AUG)
 
