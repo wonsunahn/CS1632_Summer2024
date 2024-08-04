@@ -47,7 +47,7 @@ public class BeanTest {
 	}
 
 	/**
-	 * Test BeanImpl(int slotCount, boolean isLuck, Random rand).
+	 * Test constructors for LuckBeanImpl and SkilledBeanImpl.
 	 * 
 	 * <pre>
 	 * Preconditions: beans array populated with beans as described in setUp().

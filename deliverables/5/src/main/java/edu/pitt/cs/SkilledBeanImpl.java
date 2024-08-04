@@ -36,7 +36,8 @@ public class SkilledBeanImpl implements Bean {
 	// TODO: Add member methods and variables as needed
 
 	/**
-	 * Constructor - creates a bean in skilled mode.
+	 * Constructor - creates a bean in skilled mode. It also assigns a skill level
+	 * to the bean according to a normal distribution as described above using rand.
 	 * 
 	 * @param slotCount the number of slots in the machine
 	 * @param rand      the random number generator
