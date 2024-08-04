@@ -18,7 +18,9 @@ import java.util.Random;
  * 
  * <p>
  * Make sure you bound SKILL_LEVEL to be between 0 and SLOT_COUNT-1, if the
- * randomly generated SKILL_LEVEL exceeds those bounds.
+ * randomly generated SKILL_LEVEL exceeds those bounds. If SKILL_LEVEL < 0, then
+ * you can bound it to 0, and if SKILL_LEVEL > SLOT_COUNT-1, then you can bound
+ * it to SLOT_COUNT-1.
  * 
  * <p>
  * A SKILL_LEVEL of SLOT_COUNT-1 means the bean always makes the "right" choices
